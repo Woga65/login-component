@@ -9,13 +9,17 @@ The window event `loginchange` is triggered whenever a user loggs in or out or t
 The current state can be obtained via `window.wsLogin.state`.
 The current language setting which represents either the ACCEPT-LANGUAGE http-header or the user's choice is available as an array `window.wsLogin.languages` in the format `['en-us', 'en', 'de']`.
 
-## Installation
+# dependencies
+
+Vanilla JS, PHP 8.x, MySQL, no libraries, no frameworks.
+
+# Installation
 
 - Have a look at the code to get/modify the data fields to your needs
 - Create a database with phpmyadmin or the tools provided by your hosting company
-- Edit the file classes/dbh.class.php (database credentials)
-- Edit lines 8-11 in the file classes/email-auth.class.php (verification email)
-- Edit lines 29, 34, 40 in the file verify.php (path to your index.html)
+- Edit the file `classes/dbh.class.php` (database credentials)
+- Edit lines 8-11 in the file `classes/email-auth.class.php` (verification email)
+- Edit lines 29, 34, 40 in the file `verify.php` (path to your index.html)
 - If you want a guest account, sign up with `Username: Guest / Password: 123456` otherwise add `.guest-button { display: none; }` to the file `component/ws-login.css`
 - Make any changes you like. For example you might want to take measures that the user chooses a strong password
 - In your CSS set the vars `--primary-font`, `--secondary-font`, `--font-size`, `--primary-bgr`, `--secondary-bgr`, `--primary-color`, `--secondary-color`, `--primary-accent`, `--secondary-accent` according to your needs. For the colors use the `#rrggbb` notation.
